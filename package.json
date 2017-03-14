@@ -1,0 +1,30 @@
+{
+  "name": "judgedbycover",
+  "version": "1.0.0",
+  "description": "A bot that judge a book by its cover",
+  "main": "index.js",
+  "scripts": {
+    "zip": "zip upload.zip *.js package.json node_modules/",
+    "build": "babel *.js --out-dir build",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "twitter",
+    "bot",
+    "ai",
+    "machine",
+    "learning",
+    "cognitive"
+  ],
+  "author": "Terkel Gjervig",
+  "license": "MIT",
+  "dependencies": {
+    "mongodb": "^2.2.24",
+    "request": "^2.81.0",
+    "superb": "^1.3.0",
+    "twit": "^2.2.5"
+  },
+  "devDependencies": {
+    "x-ray": "^2.3.2"
+  }
+}
