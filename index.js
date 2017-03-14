@@ -83,7 +83,7 @@ function progress() {
   return DB.setProgress().then(DB.closeDB)
 }
 
-// LETS GO! 4
+// LETS GO!
 function Main() {
   book()
   .then(analyze)
@@ -95,7 +95,5 @@ function Main() {
     return DB.setProgress().then(r => Main())
   })
 }
-
-exports.main = Main
 
 Main()
