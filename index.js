@@ -1,6 +1,6 @@
 const bot = require('./bot')
 const http = require('http')  
-const port = 3000
+const port = process.env.PORT || 8080
 
 const requestHandler = (request, response) => {  
   if(request.headers.secret_key === process.env.SECRET_KEY) {
