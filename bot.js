@@ -1,8 +1,7 @@
 'use strict';
-require('dotenv').config()
 
+require('dotenv').config()
 const request = require('request')
-const superb = require('superb')
 const DB = require('./database')
 const TW = require('./twitter')
 
@@ -70,10 +69,10 @@ function analyze(book) {
 
 function tweet(data) {
   let [response, media] = data
-  if(!response && !response.description) return retry()
+  if(!response && !response.description) return DB.setProgress().then(Main)
 
   let desc = response.description.captions[0].text
-  let status = `${capitalizeFirst(superb())} book about ${desc}.`
+  let status = capitalizeFirst(desc)
 
   return TW(status, media)
     .catch(e => console.log('Error: Posting tweet', e))

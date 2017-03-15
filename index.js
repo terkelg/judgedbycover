@@ -3,11 +3,10 @@ const http = require('http')
 const port = 3000
 
 const requestHandler = (request, response) => {  
-  console.log(request.url)
-  if (request.url === 'postTweet') {
-    console.log(request)
+  if(request.headers.secret_key === process.env.SECRET_KEY) {
+    bot()
   }
-  response.end('Hello Node.js Server!')
+  response.end('@judgedbycover')
 }
 
 const server = http.createServer(requestHandler)
