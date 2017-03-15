@@ -71,7 +71,7 @@ function tweet(data) {
   if(!response && !response.description) return DB.setProgress().then(Main)
 
   let desc = response.description.captions[0].text
-  let status = capitalizeFirst(desc)
+  let status = `Book about ${desc}.`
 
   return TW(status, media)
     .catch(e => console.log('Error: Posting tweet', e))
