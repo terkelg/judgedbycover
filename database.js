@@ -1,5 +1,6 @@
-const MongoClient = require('mongodb').MongoClient
+'use strict'
 
+const MongoClient = require('mongodb').MongoClient
 const URI = `mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@ds145299.mlab.com:45299/judgedbycover`
 
 let _db

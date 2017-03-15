@@ -1,6 +1,5 @@
-'use strict';
+'use strict'
 
-require('dotenv').config()
 const request = require('request')
 const DB = require('./database')
 const TW = require('./twitter')

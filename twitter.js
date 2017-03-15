@@ -1,3 +1,5 @@
+'use strict'
+
 const Twit = require('twit')
 
 var T = new Twit({

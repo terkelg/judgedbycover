@@ -1,3 +1,7 @@
+'use strict'
+
+require('dotenv').config()
+
 const bot = require('./bot')
 const http = require('http')  
 const port = process.env.PORT || 8080
@@ -15,9 +19,3 @@ server.listen(port, (err) => {
   if (err) return console.log('Something bad happened', err)
   console.log(`server is listening on ${port}`)
 })
-
-
-/*
- - env: have a secret
- - my command post with a secret
-*/
